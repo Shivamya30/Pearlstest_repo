@@ -1,0 +1,83 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:117892039954:task-definition/ecs-fargate-example:4",
+    "containerDefinitions": [
+        {
+            "name": "ecs-fargate-example",
+            "image": "centos",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "command": [],
+            "environment": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "ecs-fargate-example",
+                    "awslogs-region": "us-east-1",
+                    "awslogs-stream-prefix": "container"
+                }
+            }
+        }
+    ],
+    "family": "ecs-fargate-example",
+    "taskRoleArn": "arn:aws:iam::117892039954:role/ecs-fargate-example-task-role",
+    "executionRoleArn": "arn:aws:iam::117892039954:role/ecs-fargate-example-task-execution-role",
+    "networkMode": "awsvpc",
+    "revision": 4,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+        },
+        {
+            "name": "ecs.capability.execution-role-awslogs"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.task-iam-role"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "256",
+    "memory": "512",
+    "registeredAt": "2023-03-17T05:37:48.304Z",
+    "registeredBy": "arn:aws:iam::117892039954:user/pearls",
+    "tags": [
+        {
+            "key": "Project",
+            "value": "Test"
+        },
+        {
+            "key": "Environment",
+            "value": "test"
+        },
+        {
+            "key": "Name",
+            "value": "ecs-fargate-example"
+        }
+    ]
+}
